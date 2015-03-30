@@ -1,0 +1,11 @@
+{
+	"name": "angularjs-poc",
+	"version": "1.0.0",
+	"private": true,
+	"dependencies": {
+		"express": "latest",
+		"morgan": "latest",
+		"body-parser": "latest",
+		"path": "latest"
+	}
+}
