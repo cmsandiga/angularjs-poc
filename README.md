@@ -1,5 +1,5 @@
 # angularjs-poc
-Prove of Concept project using nodejs and angularjs
+Proof of concept project using nodejs and angularjs
 
 To import node projects run: `npm install`
 
