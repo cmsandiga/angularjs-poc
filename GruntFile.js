@@ -17,14 +17,32 @@ module.exports = function(grunt) {
         ],
         dest: 'public/dist/js/meltdsp.js',
       }
+    },
+
+    karma:{
+      unit:{
+        options:{
+          frameworks:['jasmine'],
+          singleRun: true,
+          browsers:['PhantomJS'],
+          files:[
+            'public/assets/js/angularjs/1.3.11/angular.js',
+            'public/assets/js/angularjs/1.3.11/angular-route.js',
+            'public/assets/js/angularjs/1.3.11/angular-cookies.js',
+            'node_modules/angular-mocks/angular-mocks.js',
+            'public/src/js/**/*.js',
+            'public/test/js/**/*.js',
+          ]
+        }
+      }
     }
   });
 
-  // Load the plugin that provides the "uglify" task.
-  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-karma');
   grunt.loadNpmTasks('grunt-contrib-concat');
 
-  // Default task(s).
+  grunt.registerTask('test',['karma']);
   grunt.registerTask('default', ['concat']);
+  
 
 };
