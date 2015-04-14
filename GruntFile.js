@@ -1,24 +1,23 @@
 module.exports = function(grunt) {
 
-  // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
-      concat: {
-        dit:{
-          src: [
-              'public/app/app.module.js',
-              'public/app/app.routes.js',
-              'public/app/components/login/loginView.js',
-              'public/app/components/home/homeView.js',
-              'public/app/components/campaign/campaignView.js',
-              'public/app/services/campaign/campaignService.js',
-              'public/app/services/login/loginService.js',
-              'public/app/templates/menu_controller.js'],
-
-          dest: 'public/app/meltdsp.js'
-        }
+    concat: {
+      dist:{
+        src: [
+          'public/src/js/app.js',
+          'public/src/js/routes.js',
+          'public/src/js/controller/CampaignController.js',
+          'public/src/js/controller/HomeController.js',
+          'public/src/js/controller/LoginController.js',
+          'public/src/js/controller/MenuController.js',
+          'public/src/js/services/CampaignService.js',
+          'public/src/js/services/LoginService.js',
+        ],
+        dest: 'public/dist/js/meltdsp.js',
       }
+    }
   });
 
   // Load the plugin that provides the "uglify" task.

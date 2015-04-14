@@ -1,1 +1,2 @@
-angular.module('meltdsp', ['ngRoute', 'ngCookies'])
+
+angular.module('meltdsp', ['ngRoute', 'ngCookies']);
