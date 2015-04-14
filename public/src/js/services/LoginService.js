@@ -15,6 +15,7 @@ angular.module('meltdsp').factory('LoginService', ['$http', '$cookies', '$cookie
 	}
 
 	var currentUser = getUserFromToken();
+
 	
 	return  {
 		signin: function(data, success, error) {

@@ -149,6 +149,7 @@ angular.module('meltdsp').factory('LoginService', ['$http', '$cookies', '$cookie
 
 	var currentUser = getUserFromToken();
 
+	
 	return  {
 		signin: function(data, success, error) {
 			$http.post('/api/authenticate', data).success(success).error(error);
