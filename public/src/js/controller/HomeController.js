@@ -1,9 +1,7 @@
-'use strict';
+angular.module('meltdsp').controller('HomeController', home);
 
-angular.module('meltdsp').controller('HomeViewController', HomeViewController);
-
-function HomeViewController($scope, $location, CampaignService, LoginService) {
-	console.log('Init HomeViewController');
+function home($scope, $location, CampaignService, LoginService) {
+	console.log('Init home');
 	$scope.message = 'Home';
 	$scope.campaigns = CampaignService.list();
 	

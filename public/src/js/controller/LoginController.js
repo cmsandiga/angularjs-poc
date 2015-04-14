@@ -1,6 +1,4 @@
-'use strict';
-
-angular.module('meltdsp').controller('LoginViewController', LoginViewController);
+angular.module('meltdsp').controller('LoginController', LoginViewController);
 
 function LoginViewController($rootScope, $scope, $location, $cookieStore, LoginService) {
 	console.log('Init LoginViewController');

@@ -1,6 +1,4 @@
-'use strict';
-
-angular.module('meltdsp').controller('CampaignViewController', CampaignViewController);
+angular.module('meltdsp').controller('CampaignController', CampaignViewController);
 
 function CampaignViewController($scope, $location, $routeParams, CampaignService, LoginService) {
 	console.log('Init CampaignViewController');

@@ -7,9 +7,14 @@ var path       = require('path');
 
 // configuration =================
 app.use(express.static(__dirname + '/public'));
+app.get('/', function(req, res) {
+    res.sendfile('./public/views/index.html');
+});
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(morgan('dev'));
+
 app.use(function(req, res, next) {
 	res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
@@ -28,7 +33,8 @@ process.on('uncaughtException', function(err) {
 	console.log(err);
 });
 
-// listen (start app with node server.js) ======================================
-app.listen(port, function() {
-	console.log("App listening on port " + port);
-});
+
+app.listen(port);
+
+console.log("App listening on port " + port);
+

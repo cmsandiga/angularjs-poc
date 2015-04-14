@@ -1,22 +1,20 @@
-'use strict';
-
-angular.module('meltdsp').config(config);
+angular.module('meltdsp', ['ngRoute', 'ngCookies']).config(config);
 
 function config($routeProvider, $httpProvider) {
 	$routeProvider
 		.when('/login', {
-			templateUrl: 'app/components/login/loginView.html',
-			controller: 'LoginViewController',
+			templateUrl: 'views/pages/login.html',
+			controller: 'LoginController',
 			controllerAs: 'vm'
 		})
 		.when('/home', {
-			templateUrl: 'app/components/home/homeView.html',
-			controller: 'HomeViewController',
+			templateUrl: 'views/pages/home.html',
+			controller: 'HomeController',
 			controllerAs: 'vm'
 		})
 		.when('/campaign/:id', {
-			templateUrl: 'app/components/campaign/campaignView.html',
-			controller: 'CampaignViewController',
+			templateUrl: 'views/pages/campaign.html',
+			controller: 'CampaignController',
 			controllerAs: 'vm'
 		})
 		.otherwise('/home');
